@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a class="active" href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>Stringler,Sayılar,Diziler ve Dizi İşlemleri</h1>
+
+        <h3>String Metotları Ve Özellikleri</h3>
+
+        <table style="height: 154px;" width="918">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3><span style="font-size: 16px; font-weight: bolder; line-height: 24px;">Özellik/Metot</span></h3>
+                    </td>
+                    <td>
+                        <h3><span style="font-size: 16px; font-weight: bolder; line-height: 24px;">Açıklama</span></h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>length</strong></td>
+                    <td>Dizgenin uzunluğunu getirir.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;String.fromCharCode()</strong></td>
+                    <td>&nbsp;Unicode değerlerinden oluşan yeni bir dizge döndürür.</td>
+                </tr>
+                <tr>
+                    <td><strong>charAt()</strong></td>
+                    <td>&nbsp;String dizgesi içinde belirtilen sıradaki elemanı getirir.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;charCodeAt()</strong></td>
+                    <td>&nbsp;UTF-16(<strong>65535 &nbsp;karekter</strong>) ya göre index numarası girilen karekteri getirir.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;concat()</strong></td>
+                    <td>&nbsp;Parametre olarak girilen iki ve daha fazla dizgeyi birleştirip tek bir dizge haline getirir.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;replace()</strong></td>
+                    <td>&nbsp;Dizge içinde belirtilen tüm desenlerle eşleşip, &nbsp;desene göre yeniden oluşturulan yeni bir dizge döndürür.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;search()</strong></td>
+                    <td>&nbsp;Dizge içinde düzenli ifadeye göre arama yapar. Eğer eşleşen kayıt bulursa ilk bulduğu index, bulmazsa -1 değerini döndürür.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;slice()</strong></td>
+                    <td style="text-align: left;">Belirtilen başlangıç ve bitiş değerlerine göre dizgeyi parçalar.</td>
+                </tr>
+                <tr>
+                    <td><strong>&nbsp;split()</strong></td>
+                    <td style="text-align: left;">&nbsp;İsteğe bağlı ayraç(örn: <strong>,</strong> ) ile dizgeyi parçalayıp yeni bir dizi oluşturur.</td>
+                </tr>
+                <tr>
+                    <td><strong>substr()</strong></td>
+                    <td style="text-align: left;">Bir dizge içinde belirtilen komundan&nbsp;belirli sayıda karakteri alır.</td>
+                </tr>
+                <tr>
+                    <td><strong>trim()</strong></td>
+                    <td style="text-align: left;">Dizgenin başındaki ve sonudaki boşlukları kaldırır.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: left;"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3>Sayılar(Numbers)</h3>
+
+        <div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">177.5</span><span class="p">;</span> <span class="c1">//ondalık ayırıcı nokta olacak.</span>
+<span class="nx">a</span><span class="o">=-</span><span class="mf">2.71</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">.345</span><span class="p">;</span> <span class="c1">//0.345</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">.345e3</span><span class="p">;</span> <span class="c1">// 0.345 x 10^3   (e'nin büyüklük-küçüklük durumu önemli değil)</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">3.E3</span><span class="p">;</span> <span class="c1">// 3 x 10^3</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">128</span><span class="nx">E</span><span class="o">+</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// 128 x 10^100</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">128</span><span class="nx">E</span><span class="o">-</span><span class="mi">5</span><span class="p">;</span> <span class="c1">// 128 x 10^(-5)</span>
+<span class="nx">a</span><span class="o">=</span><span class="mh">0xa</span><span class="p">;</span> <span class="c1">//on altılık sayı sisteminde sabit bildirimi.</span>
+       <span class="c1">//x'in ve on altılık sistemdeki sayıyı temsil eden a,...,f harflerinin büyüklük-küçüklük durumu önemli değil.</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">05</span><span class="p">;</span> <span class="c1">//sekizlik sayı sisteminde sabit bildirimi</span>
+</pre>
+        </div>
+        <h4>Number(Sayı) Metotları</h4>
+
+        <p>Javascript' de number nesnesini Number() metodu ile tanımlayabiliriz. Ancak tanımladığımız primitive tipteki (x=10) veriler de nesne olarak tanımlanırlar. Dolayısıyla;</p>
+
+        <p><code> var x = 10;</code></p>
+        <p><code> var y = new Number(10)</code></p>
+
+        <p>x ve y değişkenlerinin ikiside birer nesnedir ve iki satırda da yaptığımız iş aynıdır.</p>
+
+        <strong>toString()metodu</strong>
+        <p>Number türündeki veriyi string veri türüne çevirir.</p>
+        <p><code>var x=10;</code></p>
+
+        <p><code>var y=20;</code></p>
+
+        <p><code>var z = x.toString() + y.toString //1020</code></p>
+
+        <strong>toFixed() metodu</strong>
+
+        <p>toFixed() metodu verilen parametreye göre veriyi yuvarlar.</p>
+
+        <p><code>var x = 10.439;</code></p>
+        <p><code>x.toFixed(0); // 10</code></p>
+        <p><code>x.toFixed(2); // 10.44</code></p>
+        <p><code>x.toFixed(4); // 10.4390</code></p>
+        <p><code>x.toFixed(5); // 10.43900</code></p>
+
+        <p>** Ondalıklı kısım hangi sayıya yakınsa o sayıya yuvarlanır. Örneğin 10.439 yerine 10.501 değeri kullanılmış olsaydı ilk örnekte sonuç 11 olurdu</p>
+
+        <p>** Parametre olarak gönderdiğimiz sayı ondalıklı kısımdaki basamak sayısını belirtiyor</p>
+
+        <strong>toPrecision() metodu</strong>
+        <p>toPrecision() metodu toFixed() metodu ile aynı iş için kullanılıyor ancak farkı toFixed() metodunda verilen parametre ondalıklı kısımdaki basamak sayısını belirtirken toPrecision() metodunda tam ve ondalıklı kısmın toplamındaki basamak sayısını belirtir.</p>
+
+        <p><code>var x = 10.439;</code></p>
+        <p><code>x.toPrecision(0); // 10.439</code></p>
+        <p><code>x.toPrecision(2); // 10</code></p>
+        <p><code>x.toPrecision(4); // 10.44</code></p>
+        <p><code>x.toPrecision(5); // 10.439</code></p>
+
+        <h3>Diziler</h3>
+
+        <p>JavaScript'te dizi tanımlaması farklı şekillerde yapılabilir</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s2">"a dizisinin birinci elemanı (0 indisli elemanı)"</span><span class="p">;</span>
+<span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s2">"a dizisinin ikinci elemanı (1 indisli elemanı)"</span><span class="p">;</span>
+<span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s2">"a dizisinin üçüncü elemanı (2 indisli elemanı)"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">"b dizisinin 1. elemanı"</span><span class="p">,</span><span class="s2">"b dizisinin 2. elemanı"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="p">[</span><span class="s2">"c dizisinin 1. elemanı"</span><span class="p">,</span><span class="s2">"c dizisinin 2 elemanı"</span><span class="p">];</span>
+</pre>
+
+        <p>Şimdi az önce oluşturduğumuz dizi elemanlarına erişelim:</p>
+
+        <pre><span></span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</pre>
+
+        <p>Şimdi de dizilerin elemanları üzerinde değişiklik yapalım:</p>
+
+        <pre><span></span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</pre>
+
+        <p><b>NOT:</b> JavaScript'te bir dizinin bütün elemanlarının aynı tür olma şartı yoktur. Örneğin:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">e</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s2">"metin"</span><span class="p">,</span><span class="kc">true</span><span class="p">];</span>
+</pre>
+
+        <strong>Dizi Değerlerini Çağırmak</strong>
+
+        <p>Dizi değerlerinin her birinin kendine özgü bir indis numarası bulunur. Bu indis numaralarını istenilen dizi ögesini çağırmak için kullanırız. Aşağıda bir dizi örneği tanımlayalım ve herhangi bir ögesini indis numarası ile çağıralım.
+
+        </p>
+
+        <pre style="color: #000000; background: #ffffff;"><span style="color: #800000; font-weight: bold;">var</span> isimler<span style="color: #808030;">=</span><span style="color: #808030;">[</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Hakan</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Hasan</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Erkan</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Samet</span><span style="color: #800000;">"</span><span style="color: #808030;">]</span><span style="color: #800080;">;</span>
+<span style="color: #800000; font-weight: bold;">var</span> isim<span style="color: #808030;">=</span>isimler<span style="color: #808030;">[</span><span style="color: #008c00;">1</span><span style="color: #808030;">]</span><span style="color: #800080;">;</span>
+
+<span style="color: #696969;">// Ekran Çıktısı: Hasan</span>
+
+</pre>
+
+        <strong>Dizideki Öğe Sayısını Bulmak</strong>
+
+        <p>Tanımladığımız bir dizinin kaç ögeden oluştuğunu length yöntemini kullanarak buluruz.
+
+        </p>
+
+        <pre style="color: #000000; background: #ffffff;"><span style="color: #800000; font-weight: bold;">var</span> markalar<span style="color: #808030;">=</span> <span style="color: #808030;">[</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Honda</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Peugeot</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Mazda</span><span style="color: #800000;">"</span><span style="color: #808030;">]</span><span style="color: #800080;">;</span>
+<span style="color: #800000; font-weight: bold;">var</span> ögesayi<span style="color: #808030;">=</span> markalar<span style="color: #808030;">.</span><span style="color: #800000; font-weight: bold;">length</span><span style="color: #800080;">;</span>
+
+<span style="color: #696969;">// Ekran Çıktısı: 3</span>
+</pre>
+
+        <strong>Diziye Değer Eklemek</strong>
+        <p>Diziye değer eklemek için 2 farklı yöntem kullanılır. Aşağıda kod üzerinde bu yöntemleri daha detaylı inceleyelim:
+
+        </p>
+
+        <pre style="color: #000000; background: #ffffff;"><span style="color: #800000; font-weight: bold;">var</span><span style="color: #000000;"> dizi1</span><span style="color: #808030;">=</span><span style="color: #808030;">[</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Ahmet</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Mehmet</span><span style="color: #800000;">"</span><span style="color: #808030;">,</span><span style="color: #800000;">"</span><span style="color: #0000e6;">Hakan</span><span style="color: #800000;">"</span><span style="color: #808030;">]</span><span style="color: #800080;">;
+<span style="color: #696969;">// Yöntem 1</span></span>
+<span style="color: #808030;"><span style="color: #000000;">dizi1.[dizi1.length]</span></span><span style="color: #808030;">="Mustafa"</span><span style="color: #800080;">;</span>
+<span style="color: #696969;">// Yöntem 2
+<span style="color: #808030;"><span style="color: #000000;">dizi1[10]</span></span><span style="color: #808030;">="Samet"</span><span style="color: #800080;">;</span></span>
+
+</pre>
+
+        <p>Yukarıdaki örnekte ilk yöntemde length değeri 3’tür. 3 indis numarası boş olduğu için yeni eklenen öge 3 ögesinden sonra eklenir. İkinci yöntemde ise 10 değeri keyfi olarak tanımlanmıştır. 10 indis numarasına sahip değer boş olacağı için öge eklenirken hiçbir problem oluşturmaz.
+
+        </p>
+
+
+
+    </div>
+</body>
+
+</html

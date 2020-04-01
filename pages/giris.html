@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a class="active" href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>JavaScript/Giriş</h1>
+        <p>JavaScript HTML içine gömülebilen, tarayıcılar tarafından yorumlanabilen, web sayfalarına etkileşim kazandırmak için kullanılan bir betik dilidir. Java programlama diliyle isim benzerliği dışında bir ilgisi yoktur. JavaScript bir ECMAScript implementasyonudur. JavaScript bir betik dilidir, dolayısıyla JavaScript ile yazılan programlar da betik (script) olarak adlandırılır.</p>
+
+        <p>JavaScript her ne kadar web sitelerini (web tarayıcıların JavaScript betiklerini çalıştırma yeteneğini kullanarak) daha işlevsel hale getirmek için geliştirilmiş ve yıllarca yalnızca bu amaçla kullanılmış olsa da günümüzde sunucu (server) tarafında da yoğun olarak kullanılmaktadır. Aslında JavaScript betikleri, bir JavaScript motorunun (engine) bulunduğu her cihazda çalıştırılabilir. Şirketler ve topluluklar tarafından geliştirilen farklı JavaScript motorları vardır:</p>
+        <ul>
+            <li>Google Chrome ve Opera tarafından kullanılan V8</li>
+            <li>Mozilla Firefox tarafından kullanılan SpiderMonkey</li>
+            <li>Microsoft Edge tarafından kullanılan ChakraCore</li>
+        </ul>
+        <p>Bunlar dışında daha birçok JavaScript motoru mevcuttur.</p>
+
+        <p>JavaScript betikleri öncelikle JavaScript motoru tarafından okunur. Okunan betik, derlenerek makine diline dönüştürülür ve son olarak bu makine kodu işleme konur..</p>
+        <p>Web tarayıcı üzerinde çalışan bir JavaScript betiği; web sayfasını değişikliğe uğratmak, kullanıcıyla etkileşimde bulunmak ve sunucu ile iletişim kurmak gibi işleri başarıyla gerçekleştirir. Ancak kullanıcının dosya sisteminden dosya okuma - yazma gibi işlemleri yapamaz. Çünkü web tarayıcılar, kullanıcının güvenliğini gözeterek birtakım işlemleri ya doğrudan engeller ya da kullanıcının onayına sunar. Fakat örneğin sunucu taraflı JavaScript kullanımını mümkün kılan (çünkü bünyesinde bir JavaScript motoru barındırır) Node.js isimli çalışma ortamı, geliştiricilere daha özgür bir ortam sunar.</p>
+        <p>Bir tarayıcı sekmesinde çalışan JavaScript betiği, başka bir sekmeyle haberleşemez. Örneğin ilk sekmede example.com alan adı altında çalışan bir betik, diğer sekmede açık olan example.org alan adına erişemez, bu alan adına bir ağ (network) isteğinde bulunamaz ve buradan herhangi bir bilgi alamaz. Buna Same Origin Policy (aynı kök politikası) adı verilir. Ancak JavaScript betikleri, çalıştıkları sayfanın bulunduğu sunucu ile etkileşim içinde olabilir. Sunucu taraflı çalışan JavaScript uygulamaları için ise bu tip kısıtlamalar söz konusu değildir.</p>
+
+        <h2>JavaScript'i Nasıl Kullanacağım</h2>
+        <p> Sunucu taraflı çalışma ortamlarında, örneğin<i>Node.js</i>ortamında, bir JavaScript betiğini çalıştırmak için komut satırında (terminal, command line) <code>node ilk-betik.js </code>komutunu vermek yeterlidir. Diğer taraftan JavaScript betikleri,<i> HTML</i> dokümanlarının herhangi bir yerinde <code>&lt;script&gt;</code> etiketiyle kullanılabilir: </p>
+        <pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s1">'Merhaba Dünya!'</span><span class="p">);</span>
+        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre>
+
+        <p>Bu HTML dokümanını web tarayıcıda açarak sonucu görebilirsiniz.</p>
+
+        <p><code>&lt;script&gt;</code>etiketi, web tarayıcı tarafından, görüldüğü anda çalıştırılmaya başlanan JavaScript kodlarını içerir.</p>
+
+        <p>Eski bir standart olan <i>HTML4</i> standardında, <code>&lt;script&gt;</code> etiketinin içerdiği ifadelerin bir JavaScript betiği olduğunu web tarayıcıya bildirmek için <code>type</code> niteliğini eklemek gerekirdi:</p>
+        <pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/javascript"</span><span class="p">&gt;</span>
+    
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></pre>
+
+        <p>Ancak günümüzde kullanılan <i>HTML5</i> standardında bu gereksizdir. Çünkü HTML5 standardında, <i>type</i> niletiği için varsayılan (default) değer JavaScript'tir.
+            Bir de çok çok eski tarayıcıları bilgilendirmek için <code>language</code> niteliği kullanılırdı:</p>
+
+        <div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr">
+            <pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
+    
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre>
+        </div>
+
+        <h5>Nan</h5>
+
+        <ul>
+            <li>İlgili değerin geçerli bir sayı olmadığını belirtir.</li>
+            <li>0, 0'a bölünürse; Infinity'nin sinüsü alınırsa; Infinity ile -Infinity toplanırsa bu değer üretilir.</li>
+            <li>NaN ile herhangi bir aritmetik işlem yapılırsa sonuç NaN olur.</li>
+            <li>Herhangi bir karşılaştırma operatörü vasıtasıyla herhangi bir sayıyla veya kendisiyle karşılaştırılırsa daima false değeri üretilir.</li>
+            <li>Bir değişkene direkt NaN değeri atanabilir. NaN büyük-küçük harf duyarlılığına sahiptir.</li>
+            <li>Tipi ve değeri uygun olmayan değişkenlerle aritmetik işlem yapılırsa NaN değeri üretilir. Örneğin 5 ile "metin" çarpılırsa NaN değeri üretilir.</li>
+        </ul>
+
+
+    </div>
+
+
+</body>
+
+</html

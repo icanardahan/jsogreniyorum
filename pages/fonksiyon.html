@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a class="active" href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>JavaScript Fonksiyonlar</h1>
+        <p>En basit fonksiyon tanımı şöyle yapılır :</p>
+
+        <pre><span></span><span class="kd">function</span> <span class="nx">topla</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+
+        <p>Bu fonksiyonu betiğimiz içinde şöyle kullanabiliriz:</p>
+
+        <pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">topla</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">));</span>
+</pre>
+
+        <h2>Değişken sayıda parametre alan fonksiyonlar</h2>
+
+        <p>Normalde bir fonksiyon tanımlanırken kaç tane parametreyle tanımlanmışsa çağrılırken de o kadar parametreyle çağrılmalıdır. Ancak şimdi değişken sayıda parametre alan fonksiyonları göreceğiz. arguments nesnesi bir fonksiyon içinde kullanılabilir ve bir dizi döndürür. Bu dizi fonksiyona verilen bütün parametreleri tutar. Örnek:</p>
+
+        <pre><span></span><span class="kd">function</span> <span class="nx">topla</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">toplam</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nx">toplam</span> <span class="o">+=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">toplam</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">sonuc</span> <span class="o">=</span> <span class="nx">topla</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span> <span class="p">(</span><span class="nx">sonuc</span><span class="p">);</span>
+</pre>
+
+        <p><b>NOT:</b> Fonksiyonun zaten bir veya daha fazla normal parametresi olsa bile arguments nesnesi fonksiyona verilen bütün parametreleri döndürür. Yani:
+        </p>
+
+        <pre><span></span><span class="kd">function</span> <span class="nx">fonk</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="s2">" "</span><span class="p">);</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">fonk</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+</pre>
+
+        <p>Bu betik ekrana <tt>1 2 3 4 5 3</tt> yazar.
+        </p>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html

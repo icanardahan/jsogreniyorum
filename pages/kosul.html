@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a class="active" href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>If Koşul Yapıları</h1>
+        <p>Koşullar birer karar yapılarıdır. Şarta bağlı bir komutu yerine getirmek istiyorsak koşul ifadelerini kullanmalıyız. Ayrıca unutmayın ki koşul ifadeleri boolean tipi verilerde çalışır. Yani bir ifade ya doğrudur ya da yanlıştır mantığı ile komutları yerine getirirler.
+
+        </p>
+
+        <h3>if else Koşulu</h3>
+        <code>
+            <span>if (koşul) {</span><br>
+            <span>// Koşul doğru ise çalışacak kodlar</span><br>
+            <span>}</span><br>
+            <span>else {</span><br>
+            <span>// Koşul yanlış ise çalışacak kodlar</span><br>
+            <span>}</span>
+        </code>
+
+
+        <p>if else koşulunun çalışma prensibi bu şekildedir. Şimdi basit bir örnek yapalım...</p>
+
+        <code>
+
+            <span> &lt;script&gt;</span><br>
+            <span> var tuttugumSayi = 7;</span><br>
+            <span> var kullaniciSayisi = prompt("Aklımdan 1'den 10'a kadar hangi sayıyı tutuyorum, bil bakalım.", "");</span><br>
+            <span>if (tuttugumSayi == kullaniciSayisi) {</span><br>
+            <span> alert("Tebrikler doğru tahmin! =)");</span><br>
+            <span> } else {</span><br>
+            <span> alert("Üzgünüm. Tuttuğum sayı 7'di.");</span><br>
+            <span> }</span><br>
+            <span>&lt;/script&gt;</span><br>
+
+        </code>
+
+        <p>Son olarak belirtmeliyim ki, else if koşullarından sonra else koşulunu kodlarımıza ekleyebiliriz. Bu şekilde bir kullanımı da vardır.
+
+        </p>
+
+        <h3>switch Koşulu</h3>
+        <p>else if ile çok benzerdir. Aralarında iki önemli fark vardır. switch koşulunda sınırlamalar bellidir. Örneğin; haftanın yedi gününden birini seçmek istiyorsak switch koşulu kullanmalıyız. İkinci fark ise switch koşulu, else if koşulundan daha hızlı tepki verir. switch koşulu içerisine yazılan herhangi bir koşul sağlandığında break deyimi ile çıktı alınırken else if'te tüm koşullar okunmaktadır.
+
+        </p>
+
+        <code>
+            <span>switch (koşul) {</span><br>
+            <span>case deger1:</span><br>
+            <span>kosul = deger1 // ise çalışacak kodlar</span><br>
+            <span>break;</span><br>
+            <span>case deger2:</span><br>
+            <span>kosul = deger2 // ise çalışacak kodlar</span><br>
+            <span>break;</span><br>
+            <span>case deger3:</span><br>
+            <span>kosul = deger3 // ise çalışacak kodlar</span><br>
+            <span>break;</span><br>
+            <span>default:</span><br>
+            <span>// Koşulların hiçbiri sağlanmadığında çalışacak kod grubu</span><br>
+            <span>}</span>
+        </code>
+
+        <h3>ternary if Koşulu</h3>
+
+        <p>Bu koşul üçleme koşulu olarak da bilinir. jQuery'deki toggle'ın altyapısıdır. Aç - kapa, kapa - aç mantığı vardır.</p>
+
+        <code>
+            <span>degişken == koşul ? değer1 : değer2</span>
+        </code>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html

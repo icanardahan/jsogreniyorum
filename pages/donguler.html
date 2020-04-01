@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a class="active" href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>Döngüler</h1>
+        <h3>for Döngüsü</h3>
+
+        <pre><span></span><span class="k">for</span><span class="p">(</span><span class="nx">komut1</span><span class="p">;</span><span class="nx">koşul</span><span class="p">;</span><span class="nx">komut2</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//komutlar</span>
+<span class="p">}</span>
+</pre>
+
+        <p>for döngüsünün çalışma prensibi şöyledir:<br>
+            <b>1)</b>&nbsp;komut1 çalıştırılır.<br>
+            <b>2)</b>&nbsp;Koşula bakılır. Eğer koşul sağlanıyorsa;<br>
+        </p>
+
+        <dl>
+            <dd>
+                <dl>
+                    <dd><b>2.1)</b>&nbsp;küme parantezleri içindeki ya da -küme parantezleri yoksa- kendinden sonra gelen ilk satırdaki komut çalıştırılır.<br></dd>
+                    <dd><b>2.2)</b>&nbsp;komut2 çalıştırılır.<br></dd>
+                    <dd><b>2.3)</b>&nbsp;2. adıma dönülür.<br></dd>
+                </dl>
+            </dd>
+        </dl>
+
+        <p><b>3)</b>&nbsp;Eğer koşul sağlanmıyorsa küme parantezleri dışına ya da -küme parantezleri yoksa- kendinden sonra gelen ilk satırdaki komuttan hemen sonraki satıra çıkılır. Dolayısıyla döngüden çıkılmış olur.
+        </p>
+
+        <h3>while Döngüsü</h3>
+
+        <pre><span></span><span class="k">while</span><span class="p">(</span><span class="nx">koşul</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//komutlar</span>
+<span class="p">}</span>
+</pre>
+
+        <p>Koşul sağlandığı müddetçe komutlar çalıştırılır. Eğer bloğun içinde tek komut varsa söz konusu komutu küme parantezleri içine almaya gerek yoktur.
+
+        </p>
+
+
+
+        <h3>do-while Döngüsü</h3>
+
+        <pre><span></span><span class="k">do</span>
+<span class="p">{</span>
+    <span class="c1">//komutlar</span>
+<span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nx">koşul</span><span class="p">)</span>
+</pre>
+
+        <p>Komutlar önce her halükarda bir kez çalıştırılır. Daha sonra koşul sağlandığı müddetçe komutlar çalıştırılmaya devam edilir. Blok içinde bir tane komut varsa söz konusu komutu süslü parantezler içine almaya gerek yoktur.
+        </p>
+
+        <h3>Döngülerle Kullanılabilen Anahtar Sözcükler</h3>
+
+        <strong>break</strong>
+        <p>Döngüden çıkmayı sağlar.</p>
+
+        <strong>continue</strong>
+        <p>Döngünün o anki iterasyonunu sonlandırır. Bir sonraki iterasyona geçilir.</p>
+
+        <h3>Etiketleme</h3>
+
+        <p>Döngüler ve koşul ifadeleri etiketlenebilir. Etiketleme aslında döngüye/koşul ifadesine isim verme işlemidir. Döngüye/koşul ifadesine isim verdikten sonra bu isim break ve continue anahtar sözcüğüyle kullanılabilir. Bu durumda o döngüden/koşul ifadesinden çıkılacaktır/başa dönülecektir. Örnek:</p>
+
+        <pre><span></span><span class="nx">AnaDongu</span><span class="o">:</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">j</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">break</span> <span class="nx">AnaDongu</span><span class="p">;</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span> <span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="nx">j</span><span class="o">+</span><span class="s2">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+
+        <p>Bu kod ekrana 0 1 2 1 2 yazacaktır. Çünkü <tt>break AnaDongu;</tt> satırı ile en içteki döngüden değil AnaDongu döngüsünden çıkılır ki bu döngü en dıştaki döngüdür. Varsayılan durumda break ve continue komutlarıyla en içteki döngüden çıkılır/en içteki döngünün bir sonraki iterasyonuna geçilir.
+        </p>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html

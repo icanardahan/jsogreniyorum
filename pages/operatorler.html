@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a class="active" href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>Operatörler</h1>
+        <h3>Atama Operatörleri</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>	<span class="c1">// normal atama</span>
+<span class="nx">a</span> <span class="o">+=</span> <span class="mi">6</span><span class="p">;</span>	<span class="c1">// toplayarak atama. a = a+6'ya denk.</span>
+<span class="nx">a</span> <span class="o">-=</span> <span class="mi">6</span><span class="p">;</span>	<span class="c1">// çıkararak atama. a = a-6'ya denk.</span>
+<span class="nx">a</span> <span class="o">*=</span> <span class="mi">6</span><span class="p">;</span>	<span class="c1">// çarparak atama. a = a*6'ya denk.</span>
+<span class="nx">a</span> <span class="o">/=</span> <span class="mi">6</span><span class="p">;</span>	<span class="c1">// bölerek atama. a = a/6'ya denk.</span>
+<span class="nx">a</span> <span class="o">%=</span> <span class="mi">6</span><span class="p">;</span>	<span class="c1">// mod alarak atama. a = a%6'ya denk.</span>
+</pre>
+
+        <h3>String Operatörleri</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">s</span><span class="o">=</span><span class="s2">"metin1 "</span><span class="o">+</span><span class="s2">"metin2"</span><span class="p">;</span>	<span class="c1">// metinleri yanyana eklemeye yarar.</span>
+</pre>
+
+        <p><b>NOT:</b> + operatörüyle bir string ve bir sayıyı kullanırsanız sonuç bir string olur ve stringle sayının yanyana getirilmiş hâli üretilir.
+        </p>
+
+        <h3>Karşılaştırma Operatörleri</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">"5"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a ile b'nin değerleri eşit mi? burada c'ye true değeri atanır.</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a ile b'nin değerleri ve türleri aynı mı? c'nin değeri false olur.</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">!=</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a ile b eşit değil mi?</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a, b'den büyük mü?</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">&lt;</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a, b'den küçük mü?</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">&gt;=</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a, b'den büyük veya b'ye eşit mi?</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">&lt;=</span> <span class="nx">b</span><span class="p">;</span>	<span class="c1">// a, b'den küçük veya b'ye eşit mi?</span>
+</pre>
+
+        <h3>Mantıksal Operatörleri</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span><span class="o">&amp;&amp;</span><span class="nx">b</span><span class="p">;</span>	<span class="c1">// a ve b'nin ikisi de true ise true, aksi hâlde false üretir.</span>
+<span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span><span class="o">||</span><span class="nx">b</span><span class="p">;</span>	<span class="c1">// a ve b'nin en az birisi true ise true, aksi hâlde false üretir.</span>
+<span class="nx">c</span> <span class="o">=!</span><span class="nx">a</span><span class="p">;</span>		<span class="c1">// a'nın değeri true ise false, false ise true üretir.</span>
+</pre>
+
+        <h3>Koşul Operatörleri</h3>
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">?</span> <span class="s2">"a true"</span> <span class="o">:</span> <span class="s2">"a false"</span><span class="p">;</span>
+</pre>
+
+        <p>Bu örnekte <code>a&nbsp;? "a true"&nbsp;: "a false"</code> ifadesi, <code>a</code>'nın tuttuğu değer true ise <code>a true</code> değerini <code>a</code>'nın tuttuğu değer false ise <code>a false</code> değerini tutar.
+        </p>
+
+        <h3>Operatör Öncelikleri</h3>
+
+        <p>Operatörlerin öncelikleri aşağıda listelenmiştir. Eşit önceliğe sahip operatörlerde işleme sırası, "işleme yönü"nde belirtilen şekildedir.</p>
+
+        <table class="wikitable">
+            <tbody>
+                <tr>
+                    <th>Öncelik</th>
+                    <th>Operatör tipi</th>
+                    <th>İşleme yönü</th>
+                    <th>Operatör(ler)</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">1</td>
+                    <td rowspan="2">üye elemanlara erişme</td>
+                    <td rowspan="2">soldan sağa</td>
+                    <td><code>.</code></td>
+                </tr>
+                <tr>
+                    <td><code>[]</code></td>
+                </tr>
+                <tr>
+                    <td>nesne oluşturma</td>
+                    <td>sağdan sola</td>
+                    <td><code>new</code></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>fonksiyon çağrısı</td>
+                    <td>soldan sağa</td>
+                    <td><code>()</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td>bir arttırma</td>
+                    <td>mümkün değil</td>
+                    <td><code>++</code></td>
+                </tr>
+                <tr>
+                    <td>bir azaltma</td>
+                    <td>mümkün değil</td>
+                    <td><code>--</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="7">4</td>
+                    <td>mantıksal değil</td>
+                    <td>sağdan sola</td>
+                    <td><code>!</code></td>
+                </tr>
+                <tr>
+                    <td>bitsel değil</td>
+                    <td>sağdan sola</td>
+                    <td><code>~</code></td>
+                </tr>
+                <tr>
+                    <td>tek operandlı +</td>
+                    <td>sağdan sola</td>
+                    <td><code>+</code></td>
+                </tr>
+                <tr>
+                    <td>işaret değiştirme</td>
+                    <td>sağdan sola</td>
+                    <td><code>-</code></td>
+                </tr>
+                <tr>
+                    <td>typeof</td>
+                    <td>sağdan sola</td>
+                    <td><code>typeof</code></td>
+                </tr>
+                <tr>
+                    <td>void</td>
+                    <td>sağdan sola</td>
+                    <td><code>void</code></td>
+                </tr>
+                <tr>
+                    <td>delete</td>
+                    <td>sağdan sola</td>
+                    <td><code>delete</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">5</td>
+                    <td>çarpma</td>
+                    <td>soldan sağa</td>
+                    <td><code>*</code></td>
+                </tr>
+                <tr>
+                    <td>bölme</td>
+                    <td>soldan sağa</td>
+                    <td><code>/</code></td>
+                </tr>
+                <tr>
+                    <td>mod alma</td>
+                    <td>soldan sağa</td>
+                    <td><code>%</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">6</td>
+                    <td>toplama</td>
+                    <td>soldan sağa</td>
+                    <td><code>+</code></td>
+                </tr>
+                <tr>
+                    <td>çıkarma</td>
+                    <td>soldan sağa</td>
+                    <td><code>-</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">7</td>
+                    <td rowspan="3">bitsel kaydırma</td>
+                    <td rowspan="3">soldan sağa</td>
+                    <td>&lt;&lt;</td>
+                </tr>
+                <tr>
+                    <td><code>&gt;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&gt;&gt;&gt;</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="6">8</td>
+                    <td rowspan="4">büyüklük-küçüklük karşılaştırması</td>
+                    <td rowspan="4">soldan sağa</td>
+                    <td><code>&lt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;=</code></td>
+                </tr>
+                <tr>
+                    <td><code>&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&gt;=</code></td>
+                </tr>
+                <tr>
+                    <td>in</td>
+                    <td>soldan sağa</td>
+                    <td><code>in</code></td>
+                </tr>
+                <tr>
+                    <td>instanceof</td>
+                    <td>soldan sağa</td>
+                    <td><code>instanceof</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="4">9</td>
+                    <td rowspan="4">eşitlik karşılaştırması</td>
+                    <td rowspan="4">soldan sağa</td>
+                    <td><code>==</code></td>
+                </tr>
+                <tr>
+                    <td><code>!=</code></td>
+                </tr>
+                <tr>
+                    <td><code>===</code></td>
+                </tr>
+                <tr>
+                    <td><code>!==</code></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>bitsel ve</td>
+                    <td>soldan sağa</td>
+                    <td><code>&amp;</code></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>bitsel xor</td>
+                    <td>soldan sağa</td>
+                    <td><code>^</code></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>bitsel veya</td>
+                    <td>soldan sağa</td>
+                    <td><code>|</code></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>mantıksal ve</td>
+                    <td>soldan sağa</td>
+                    <td><code>&amp;&amp;</code></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>mantıksal veya</td>
+                    <td>soldan sağa</td>
+                    <td><code>||</code></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>koşul</td>
+                    <td>sağdan sola</td>
+                    <td><code>?:</code></td>
+                </tr>
+                <tr>
+                    <td rowspan="12">16</td>
+                    <td rowspan="12">atama</td>
+                    <td rowspan="12">sağdan sola</td>
+                    <td><code>=</code></td>
+                </tr>
+                <tr>
+                    <td><code>+=</code></td>
+                </tr>
+                <tr>
+                    <td><code>-=</code></td>
+                </tr>
+                <tr>
+                    <td><code>*=</code></td>
+                </tr>
+                <tr>
+                    <td><code>/=</code></td>
+                </tr>
+                <tr>
+                    <td><code>%=</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;&lt;=</code></td>
+                </tr>
+                <tr>
+                    <td><code>&gt;&gt;=</code></td>
+                </tr>
+                <tr>
+                    <td><code>&gt;&gt;&gt;=</code></td>
+                </tr>
+                <tr>
+                    <td><code>&amp;=</code></td>
+                </tr>
+                <tr>
+                    <td><code>^=</code></td>
+                </tr>
+                <tr>
+                    <td><code>|=</code></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>virgül</td>
+                    <td>soldan sağa</td>
+                    <td><code>,</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+</body>
+
+</html

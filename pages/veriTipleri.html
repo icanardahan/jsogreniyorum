@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a class="active" href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h3>Sayısal Veri Tipi(Number)</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">177.5</span><span class="p">;</span> <span class="c1">//ondalık ayırıcı nokta olacak.</span>
+<span class="nx">a</span><span class="o">=-</span><span class="mf">2.71</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">.345</span><span class="p">;</span> <span class="c1">//0.345</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">.345e3</span><span class="p">;</span> <span class="c1">// 0.345 x 10^3   (e'nin büyüklük-küçüklük durumu önemli değil)</span>
+<span class="nx">a</span><span class="o">=</span><span class="mf">3.E3</span><span class="p">;</span> <span class="c1">// 3 x 10^3</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">128</span><span class="nx">E</span><span class="o">+</span><span class="mi">100</span><span class="p">;</span> <span class="c1">// 128 x 10^100</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">128</span><span class="nx">E</span><span class="o">-</span><span class="mi">5</span><span class="p">;</span> <span class="c1">// 128 x 10^(-5)</span>
+<span class="nx">a</span><span class="o">=</span><span class="mh">0xa</span><span class="p">;</span> <span class="c1">//on altılık sayı sisteminde sabit bildirimi.</span>
+       <span class="c1">//x'in ve on altılık sistemdeki sayıyı temsil eden a,...,f harflerinin büyüklük-küçüklük durumu önemli değil.</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">05</span><span class="p">;</span> <span class="c1">//sekizlik sayı sisteminde sabit bildirimi</span>
+</pre>
+
+        <ul>
+            <li>Nasılsa baştaki sıfırlar önemsiz diye sayıların başına sıfır koymamalıyız. Çünkü yukarıdaki kodda da görebileceğiniz üzere JavaScript yorumlayıcısı başında sıfır olan sayıları sekizlik sayı sistemindeki sayı olarak görmektedir.</li>
+            <li>Onaltılık ve sekizlik tabandaki sayı bildirimlerinde ondalık sayı ve E ile üstlü sayı bildiremeyiz. Onaltılık sayı bildiriminde E sayının içindeki bir rakam olarak görülür. Sekizlik sayı bildiriminde de sayının içinde E kullanılması durumunda betik hata verir.</li>
+            <li>Sekizlik sayı bildiriminde 0-7 aralığındaki rakamları kullanmalıyız.</li>
+        </ul>
+        <h5>Infinity ve -Infinity</h5>
+        <ul>
+            <li>Infinity artı sonsuzu ve -Infinity eksi sonsuzu ifade eder.</li>
+            <li>Eğer bir değişkenin değeri maksimum sayı kapasitesini aşarsa ilgili değişken Infinity değerini tutar. Benzer şekilde bir değişkenin değeri minimum sayı kapasitesinin altına inerse ilgili değişken -Infinity değerini tutar.</li>
+            <li>Bir sayıyı 0'a böldüğümüzde sonuçta Infinity değeri üretilir.</li>
+            <li>İstersek bir değişkene direkt Infinity ve -Infinity değerlerini atayabiliriz. Infinity ve -Infinity büyük-küçük harf duyarlılığına sahiptir.</li>
+            <li>Infinity ve -Infinity == ve&nbsp;!= operatörleriyle kıyaslanabilir. == operatörü eğer taraflardan ikisi de Infinity veya taraflardan ikisi de -Infinity ise true, aksi takdirde false değeri üretilir.&nbsp;!= operatörü ise bunun tam tersini yapar.</li>
+            <li>Infinity ve -Infinity &gt;, &lt;, &lt;=, &gt;= operatörleri vasıtasıyla kendileriyle, birbirleriyle veya diğer sayılarla kıyaslanabilir. Infinity kendisi hariç her sayıdan büyüktür. -Infinity ise kendisi hariç her sayıdan küçüktür.</li>
+            <li>Matematikteki sonsuz ile ilgili bütün kurallar Infinity ve -Infinity için de geçerlidir. Örneğin Infinity'ye 5 eklenirse sonuç yine Infinity olur. Bir sayı Infinity'ye bölünürse sonuç sıfır çıkar.</li>
+        </ul>
+
+        <h5>Nan</h5>
+
+        <ul>
+            <li>İlgili değerin geçerli bir sayı olmadığını belirtir.</li>
+            <li>0, 0'a bölünürse; Infinity'nin sinüsü alınırsa; Infinity ile -Infinity toplanırsa bu değer üretilir.</li>
+            <li>NaN ile herhangi bir aritmetik işlem yapılırsa sonuç NaN olur.</li>
+            <li>Herhangi bir karşılaştırma operatörü vasıtasıyla herhangi bir sayıyla veya kendisiyle karşılaştırılırsa daima false değeri üretilir.</li>
+            <li>Bir değişkene direkt NaN değeri atanabilir. NaN büyük-küçük harf duyarlılığına sahiptir.</li>
+            <li>Tipi ve değeri uygun olmayan değişkenlerle aritmetik işlem yapılırsa NaN değeri üretilir. Örneğin 5 ile "metin" çarpılırsa NaN değeri üretilir.</li>
+        </ul>
+
+
+        <h3>Stringler</h3>
+        <pre><span></span><span class="kd">var</span> <span class="nx">s1</span><span class="o">=</span><span class="s2">"metin"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">s2</span><span class="o">=</span><span class="s1">'metin'</span><span class="p">;</span>
+</pre>
+
+        <p>Stringlerin içinde kullanılabilen escape sequence'ler şunlardır:</p>
+        <table class="wikitable">
+
+            <tbody>
+                <tr>
+                    <th>Escape sequence
+                    </th>
+                    <th>Anlamı
+                    </th>
+                </tr>
+                <tr>
+                    <td>\b
+                    </td>
+                    <td>Backspace (silme tuşu)
+                    </td>
+                </tr>
+                <tr>
+                    <td>\t
+                    </td>
+                    <td>Tab (yatay)
+                    </td>
+                </tr>
+                <tr>
+                    <td>\n
+                    </td>
+                    <td>Linefeed (yeni satır)
+                    </td>
+                </tr>
+                <tr>
+                    <td>\v
+                    </td>
+                    <td>Tab (dikey)
+                    </td>
+                </tr>
+                <tr>
+                    <td>\f
+                    </td>
+                    <td>Form feed
+                    </td>
+                </tr>
+                <tr>
+                    <td>\r
+                    </td>
+                    <td>Carriage return
+                    </td>
+                </tr>
+                <tr>
+                    <td>\"
+                    </td>
+                    <td>Çift tırnak
+                    </td>
+                </tr>
+                <tr>
+                    <td>\'
+                    </td>
+                    <td>Tek tırnak
+                    </td>
+                </tr>
+                <tr>
+                    <td>\\
+                    </td>
+                    <td>\ karakteri (ters slash)
+                    </td>
+                </tr>
+                <tr>
+                    <td>\000
+                    </td>
+                    <td>Bir Latin-1 (ISO-8859-1) karakteri (sekizlik tabanda). 000'dan 377'ye kadar olası değer var.
+                    </td>
+                </tr>
+                <tr>
+                    <td>\xHH
+                    </td>
+                    <td>Bir Latin-1 (ISO-8859-1) karakteri (onaltılık tabanda). 00'dan FF'ye kadar olası değer var.
+                    </td>
+                </tr>
+                <tr>
+                    <td>\uHHHH
+                    </td>
+                    <td>Bir Unicode karakteri (onaltılık tabanda).
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>Çift tırnak ile çevrelenmiş bir stringin içindeki tek tırnakları; tek tırnakla çevrelenmiş bir stringin içindeki çift tırnakları escape etme gereksinimi olmadan gönül rahatlığıyla kullanabiliriz.</li>
+        </ul>
+
+        <h3>Boolean</h3>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">c</span><span class="o">=</span><span class="mi">5</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span>
+</pre>
+
+        <h5>undefined</h5>
+
+        <p>Tanımlanmamış veya tanımlanmış ama değer atanmamış değişkenlerin tipi undefined'tır. undefined tipteki bir değişkeni ekrana yazmamız durumunda ekrana "undefined" yazılır. undefined değişkenler bellekte yer kaplamaz.</p>
+
+        <h5>null</h5>
+
+        <p>Bir değişkenin var olduğunu ve bellekte yer kapladığını ama değişkenin içinin "boş" olduğunu belirtir.</p>
+
+        <h2>JavaScript'te tür güvenliği</h2>
+
+        <p>JavaScript tür güvenliği olmayan bir dildir. Aynı değişkende önce string, sonra tam sayı depolayabiliriz:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="s2">"metin"</span><span class="p">;</span>
+</pre>
+    </div>
+
+
+</body>
+
+</html

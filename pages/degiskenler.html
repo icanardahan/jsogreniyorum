@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a class="active" href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>Değişkenler</h1>
+        <p><strong>Değişken Tanımlama</strong></p>
+
+        <p>JavaScript'te değişken tanımlamaları var anahtar sözcüğüyle yapılır. Örnek:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</pre>
+
+        <p>Buradaki <tt>document.write(a)</tt> kodu ekrana yazı yazdırmaya yarar. Parantez içindeki değişken, sabit ya da ifade ekrana yazdırılır.
+        </p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</pre>
+
+        <p>Aynı satırda birden fazla değişken tanımlayabiliriz. Hatta bunlardan istediğimize değer atama, istediğimize değer atamama hakkımız da vardır:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nx">d</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
+</pre>
+
+        <p>JavaScript, zayıf tür güvenliğine sahip bir dildir. Aynı değişkende önce string, sonra sayı depolayabiliriz:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="nx">a</span><span class="o">=</span><span class="s2">"metin"</span><span class="p">;</span>
+</pre>
+
+        <p>Ancak bu, JavaScript'te tür diye bir kavram olmadığı anlamına gelmez. JavaScript'te varsayılan olarak değişkenlerin türleri değişkenlere atanan değerlerden anlaşılır, değişkenin değerini değiştirdiğimizde değişkenin türü de otomatik olarak değişir. Ancak istersek bu varsayılan durumu değiştirebiliriz:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">sayi</span> <span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="nx">sayi</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+<span class="c1">//aşağıdaki satırı yazsaydık hata oluşurdu.</span>
+<span class="c1">//sayi="string";</span>
+</pre>
+    </div>
+
+
+</body>
+
+</html

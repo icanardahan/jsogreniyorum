@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a class="active" href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>JavaScript'de Yazım Kuralları(Syntax)</h1>
+        <p>JavaScript’in yazılım kurallarının (Syntax) çoğu JAVA programlamaya benzer ancak JavaScript aynı zamanda Perl ve Python’dan da etkilenir. JavaScript karakter kümesi olarak Unicode
+            Unicode (Evrensel Kod) Unicode Consortium organizasyonu tarafından geliştirilen ve her karaktere bir sayı değeri karşılığı atayan bir endüstri standardıdır.
+            karakter kümesi kullanılır. Fakat, bu her Unicode kodlamasının görüntüleneceği anlamına gelmez. Karakterin “Glyph” (Kılıf) ad verilen görüntüsünün de belge çözümleyicinin içinde tanımlanmış olması gerekmektedir. Doğal olarak bu olasılık az kullanılan arkaik diller için geçerlidir. Batı dillerine ait tüm karakterler sorunsuzca görüntülenecektir. Diğer dillerinde karakter kodları çözümleyicilere eklenmeye devam etmektedir.</p>
+
+        <p>JavaScript programlama dilinde Unicode karakterlerinin desteklenmesi, JavaScript programlarında, değişken isimler, fonksiyon isimleri gibi kullanıcı tanımlı her değişken ve nesnenin Türkçe isimlerle tanıtılıp çağırılabileceği anlamına gelir. Bu yerel olarak programın anlaşılabilirliliğini arttırır, fakat uluslararası ortamlarda, yerel diller ile yazılmış programların anlaşılabilililiği oldukça azalır.</p>
+
+        <p>JavaScript dilinde alfanumeric değişkenler ve düzenli ifadeler (RegExp) gereği olmadıkça, her türlü boşluk, satır aralığı ve tab karakterlerini göz ardı eder. bu nedenle, kendimiz için en anlamlı kod düzenlemelerini yaparak, program yazım konforuna sahip oluruz. JavaScript programlama dili, Algol/Pascal/ADA serbest yazım formunu aynen destekler. Yazım yöntemi çok esnek olmasına karşın, alışkanlıktan kaynaklanan belirli kalıplar içinde kalmanın oldukça yararı vardır. Çünkü yazılmış olan kodun veya kod bloğunun ileride bakımı için bize büyük kolaylıklar sağlayacaktır.</p>
+
+        <p>JavaScript programlama dilinde, bazı program dillerinde olduğu gibi, blok içinde alınmış kodlar, yeni bir kapsam alanı yaratmazlar. JavaScript yorumlayıcısı, bildirim bekleyen if gibi program öğelerine tek bildirim yerine birden çok bildirim belirtilmesi için çalıştırılacak bildirimlerin bir bildirim bloğu { } içine alınmasını öngörmüştür. Bildirim bloğunda kullanılacak program adımları bellidir ve bunlarda kullanılacak bildirim bloğu { }’nun amacı, içeriğine yeni bir kapsam açmak değil, içeriği olan bildirimlerin sıra ile çalıştırılmasını sağlamaktır.</p>
+
+        <p>JavaScript’te bütün değikenler harf, alt çizgi veya ( _ veya altbağlaç ) veya dolar ( $ ) işareti ile başlar. Rakamlar ve diğer karakterler bu üç karakterden sonra kullanılır. Değişkenler $ işareti ile başlatılabilmesine karşın güncel kullanımda bu olanak sadece makine tarafından oluşturulan otomatik JavaScript kodlarına bırakılmaktadır. Yani insanlar tarafından oluşturulan kodlarda, önleyici hiç bir kural olmamasına karşın, değişken isimlerinde $ karakteri pek kullanılmamaktadır.</p>
+
+        <p>
+            <p>JavaScript büyük küçük harf duyarlıdır&nbsp;<em>(Case Sensitive).&nbsp;</em>Yani aynı isimde hem büyük harfle hemde küçük harfle değişken oluşturursanız JavaScript bu iki değişkeni ayrı ayrı yorumlar. Örnek icerik, Icerik veya ICERIK değişkenler birbirinden farklıdır ve farklı şekilde yorumlanacaktır. JavaScript’te aşağıda belirtilen rezerv edilmiş anahtar kelimelerden oluşan değişken oluşturamazsınız. Son olarak tek tırnak ile çift tırnak arasında herhangi bir fark yoktur. Dikkat edilmesi gereken eğer tek tırnak ile başlarsanız tek tırnak, çift tırnak ile başlarsanız çift tırnak içeriğinizi bitirmenizdir.</p>
+
+            <strong>JavaScript'te Yorum Satırı Ekleme</strong>
+
+            <p>Javascript’te yorum satırı ekme tıpkı C++ ve diğer dillerde olduğu gibidir. Programcıların yazmış oldukları kodları açıklamak için kullandığı ve kodun içinde yazdıkları kimi zaman çok büyük olan metinlerdir. Gerek fonksiyonlarda gerekse değişkenlerde yorum veya açıklama satırı kullanılarak fonksiyonun veya değişkenin ne tür iş yaptığını veya ne tür bir çıktı verdiğini belirtilir. Tek satır açıklama yazmak için satırın başına // metin yazmanı yeterliyken birden fazla satırlı yorum veya açıklama yazmak için metninizi /* metin */ şeklinde yazmalısınız. Yorumlar ve açıklama satırları yorumlayıcılar (interpreter) tarafından dikkate alınmaz. Dolayısıyla sisteminize de herhangi bir işlem yükü getirmeyecektir. Programcılar yazmış oldukları fonksiyonları ve değişkenleri daha sonra hatırlamak veya başkalarının da rahat bir şekilde okuyabilmeleri için yorum ve açıklama satırlarına önem verirler.</p>
+
+            <p><strong>Rezerv Edilmiş Kelimeler</strong></p>
+
+            <p>Bu sahife, JavaScript'te kullanılan anahtar kelimelerin listesini içerir. Bu kelimeler değişkenler, fonksiyonlar ve sair nesneler için kullanılamaz.</p>
+
+            <table class="wikitable">
+
+                <tbody>
+                    <tr>
+                        <td><tt>break</tt></td>
+                        <td><tt>default</tt></td>
+                        <td><tt>finally</tt></td>
+                        <td><tt>instanceof</tt></td>
+                        <td><tt>this</tt></td>
+                        <td><tt>var</tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt>case</tt></td>
+                        <td><tt>delete</tt></td>
+                        <td><tt>for</tt></td>
+                        <td><tt>new</tt></td>
+                        <td><tt>throw</tt></td>
+                        <td><tt>void</tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt>catch</tt></td>
+                        <td><tt>do</tt></td>
+                        <td><tt>function</tt></td>
+                        <td><tt><s>null</s></tt></td>
+                        <td><tt><s>true</s></tt></td>
+                        <td><tt>while</tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt>continue</tt></td>
+                        <td><tt>else</tt></td>
+                        <td><tt>if</tt></td>
+                        <td><tt>return</tt></td>
+                        <td><tt>try</tt></td>
+                        <td><tt>with</tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt>debugger</tt></td>
+                        <td><tt><s>false</s></tt></td>
+                        <td><tt>in</tt></td>
+                        <td><tt>switch</tt></td>
+                        <td><tt>typeof</tt></td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>JavaScript'te gelecekte kullanılmak üzere rezerve edilmiş kelimeler</strong></p>
+
+            <table class="wikitable">
+
+                <tbody>
+                    <tr>
+                        <td><tt><s>abstract</s></tt></td>
+                        <td><tt>const</tt></td>
+                        <td><tt><s>final</s></tt></td>
+                        <td><tt><s>int</s></tt></td>
+                        <td><tt>package</tt></td>
+                        <td><tt>static</tt></td>
+                        <td><tt><s>volatile</s></tt>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt><s>boolean</s></tt></td>
+                        <td><tt><s>double</s></tt></td>
+                        <td><tt><s>float</s></tt></td>
+                        <td><tt>interface</tt></td>
+                        <td><tt>private</tt></td>
+                        <td><tt>super</tt></td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt><s>byte</s></tt></td>
+                        <td><tt>enum</tt></td>
+                        <td><tt><s>goto</s></tt></td>
+                        <td><tt>let</tt></td>
+                        <td><tt>protected</tt></td>
+                        <td><tt><s>synchronized</s></tt></td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt><s>char</s></tt></td>
+                        <td><tt>export</tt></td>
+                        <td><tt>implements</tt></td>
+                        <td><tt><s>long</s></tt></td>
+                        <td><tt>public</tt></td>
+                        <td><tt><s>throws</s></tt></td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><tt>class</tt></td>
+                        <td><tt>extends</tt></td>
+                        <td><tt>import</tt></td>
+                        <td><tt><s>native</s></tt></td>
+                        <td><tt><s>short</s></tt></td>
+                        <td><tt><s>transient</s></tt></td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+    </div>
+
+
+</body>
+
+</html
