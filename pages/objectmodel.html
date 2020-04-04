@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+        <a class="active" href="objectmodel.html">JavaScript Object(Nesne) Modeli ve Kullanımı</a>
+        <a href="jsdom.html"> JavaScript DOM (Document Object Model) Kullanımı</a>
+
+
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1>JavaScript'te Object(Nesne) Modeli ve Kullanımı </h1>
+
+        <h3>Var olan nesneleri kullanma</h3>
+
+        <pre><code><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"deneme"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">dizi</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dizi</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span></code>
+</pre>
+
+        <p>Birincisinde document nesnesinin statik write() metoduyla ekrana <tt>deneme</tt> yazdık. İkincisinde ise Array nesnesinin statik olmayan length özelliğiyle ilgili dizinin eleman sayısını aldık. Bir metot veya özellik herhangi bir nesne türünden değer döndürebilir. Metotlar, bir nesneyle ilişkilendirilmiş fonksiyonlardan başka bir şey değildir. Özellikler ise yine bir nesneyle ilişkilendirilmiş değişkenlerdir.
+        </p>
+
+        <p>JavaScript'te tanımladığımız her dizi aslında Array türünden bir nesnedir.
+        </p>
+
+        <h3>Yeni nesne tanımlama</h3>
+
+        <p>JavaScript'te yeni nesne tanımı farklı şekillerde yapılabilir:</p>
+
+        <pre><code><span></span><span class="nx">insan</span><span class="o">=</span><span class="k">new</span> <span class="nb">Object</span><span class="p">();</span> <span class="c1">//yeni nesne oluşturuyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">isim</span><span class="o">=</span><span class="s2">"ahmet"</span><span class="p">;</span> <span class="c1">//nesnemizin isim özelliğine ahmet değerini veriyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">soyad</span><span class="o">=</span><span class="s2">"yılmaz"</span><span class="p">;</span> <span class="c1">//nesnemizin soyad özelliğine yılmaz değerini veriyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">gozRengi</span><span class="o">=</span><span class="s2">"mavi"</span><span class="p">;</span> <span class="c1">//nesnemizin gozRengi özelliğine mavi değerini veriyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">yas</span><span class="o">=</span><span class="mi">56</span><span class="p">;</span> <span class="c1">//nesnemizin yas özelliğine 56 değerini veriyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">konus</span><span class="o">=</span><span class="nx">konus</span><span class="p">;</span> <span class="c1">//nesnemize konus metodunu bağlıyoruz.</span>
+<span class="kd">function</span> <span class="nx">konus</span><span class="p">()</span> <span class="c1">//konus metodunu yazıyoruz.</span>
+<span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"benim adım "</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">isim</span><span class="p">);</span>
+<span class="p">}</span></code>
+</pre>
+
+        <p>veya</p>
+
+        <pre><span></span><span class="nx">insan</span><span class="o">=</span><span class="p">{</span><span class="nx">isim</span><span class="o">:</span><span class="s2">"ahmet"</span><span class="p">,</span><span class="nx">soyad</span><span class="o">:</span><span class="s2">"yılmaz"</span><span class="p">,</span><span class="nx">gozRengi</span><span class="o">:</span><span class="s2">"mavi"</span><span class="p">,</span><span class="nx">yas</span><span class="o">:</span><span class="mi">56</span><span class="p">};</span> <span class="cm">/*nesnemizin tüm özelliklerini</span>
+<span class="cm">                                                             ve bu özelliklerin değerlerini</span>
+<span class="cm">                                                             tek satırda belirtiyoruz.*/</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">konus</span><span class="o">=</span><span class="nx">konus</span><span class="p">;</span> <span class="c1">//nesnemize konus metodunu bağlıyoruz.</span>
+<span class="kd">function</span> <span class="nx">konus</span><span class="p">()</span> <span class="c1">//konus metodunu yazıyoruz.</span>
+<span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"benim adım "</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">isim</span><span class="p">);</span>
+<span class="p">}</span>
+</pre>
+
+        <p>Yukarıdaki yöntemlerden herhangi biriyle oluşturduğumuz nesneyi aşağıdaki gibi kullanabiliriz:</p>
+
+        <pre><span></span><span class="nx">insan</span><span class="p">.</span><span class="nx">isim</span><span class="o">=</span><span class="s2">"esra"</span><span class="p">;</span> <span class="c1">//nesnemizin isim özelliğinin değerini değiştiriyoruz.</span>
+<span class="nx">insan</span><span class="p">.</span><span class="nx">konus</span><span class="p">();</span> <span class="c1">//nesnemizin konus() metodunu çağırıyoruz.</span>
+</pre>
+
+        <h3>Yeni nesne kalıbı tanımlama</h3>
+
+        <pre><span></span><span class="kd">function</span> <span class="nx">insan</span><span class="p">(</span><span class="nx">isim</span><span class="p">,</span><span class="nx">soyad</span><span class="p">,</span><span class="nx">yas</span><span class="p">,</span><span class="nx">gozRengi</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">isim</span><span class="o">=</span><span class="nx">isim</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">soyad</span><span class="o">=</span><span class="nx">soyad</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">yas</span><span class="o">=</span><span class="nx">yas</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gozRengi</span><span class="o">=</span><span class="nx">gozRengi</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">konus</span><span class="o">=</span><span class="nx">konus</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">konus</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"benim adım "</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">isim</span><span class="p">);</span>
+<span class="p">}</span>
+</pre>
+
+
+        <p>Şimdi bu nesne kalıbını kullanarak yeni nesne oluşturalım:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">ayse</span><span class="o">=</span><span class="k">new</span> <span class="nx">insan</span><span class="p">();</span>
+<span class="nx">ayse</span><span class="p">.</span><span class="nx">isim</span><span class="o">=</span><span class="s2">"ayşe"</span><span class="p">;</span>
+<span class="nx">ayse</span><span class="p">.</span><span class="nx">soyad</span><span class="o">=</span><span class="s2">"yılmaz"</span><span class="p">;</span>
+<span class="nx">ayse</span><span class="p">.</span><span class="nx">yas</span><span class="o">=</span><span class="mi">15</span><span class="p">;</span>
+<span class="nx">ayse</span><span class="p">.</span><span class="nx">gozRengi</span><span class="o">=</span><span class="s2">"mavi"</span><span class="p">;</span>
+<span class="nx">ayse</span><span class="p">.</span><span class="nx">konus</span><span class="p">();</span>
+</pre>
+
+        <p>Yapıcı metot kullanarak da nesnemizi oluşturabiliriz:</p>
+
+        <pre><span></span><span class="kd">var</span> <span class="nx">hakan</span><span class="o">=</span><span class="k">new</span> <span class="nx">insan</span><span class="p">(</span><span class="s2">"hakan"</span><span class="p">,</span><span class="s2">"yılmaz"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="s2">"ela"</span><span class="p">);</span>
+<span class="nx">hakan</span><span class="p">.</span><span class="nx">konus</span><span class="p">();</span>
+</pre>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html

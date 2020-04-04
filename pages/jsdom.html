@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <title>JavaScript Öğreniyorum</title>
+</head>
+
+<body>
+    <div class="kenar-cubugu">
+        <a href="../index.html">Anasayfa</a>
+        <a href="giris.html">JavaScript Giriş</a>
+        <a href="syntax.html">JavaScript Yazılım(Syntax)Yapısı</a>
+        <a href="degiskenler.html">Değişkenler</a>
+        <a href="operatorler.html">Operatörler</a>
+        <a href="aritmetik.html">Aritmetik</a>
+        <a href="veriTipleri.html">Veri Tipleri</a>
+        <a href="fonksiyon.html">Fonksiyon Yapısı</a>
+        <a href="olaylar.html">Olaylar (Events)</a>
+        <a href="ssdd.html">Stringler,Sayılar,Diziler ve Dizi İşlemleri</a>
+        <a href="kosul.html">If Koşul Yapıları</a>
+        <a href="donguler.html">Döngüler</a>
+        <a href="tipDonusumleri.html">Tip Dönüşümleri</a>
+        <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
+        <a href="objectmodel.html">JavaScript Object(Nesne) Modeli ve Kullanımı</a>
+        <a class="active" href="jsdom.html">JavaScript DOM (Document Object Model) Kullanımı</a>
+
+
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="icerik">
+        <h1 style="">JavaScript DOM (Document Object Model) Kullanımı</h1>
+
+
+
+        <p>Document Object Model, "DOM", "Belge Nesnesi Modeli" anlamlarına da gelmektedir. İnternet tarayıcıları girilen internet sayfasını bir belge, bu belge (sayfa) içerisinde bulunan tüm elemanları da nesne olarak kabul eder. Buna göre resim, yazı, form gibi tüm elemanlar nesnedir. İşte DOM sayfa içindeki herhangi bir nesnenin özelliğine müdahele edebilmemize, nesne özelliklerini değiştirebilmemize olanak sağlar. Bunu yapabilmek için de JavaScript gibi bazı script dilleri kullanmamız gerekir.
+        </p>
+
+
+        <h2>Nasıl Kullanılır(Örnek)</h2>
+
+        <p>Sayfamızda bulunan bir resim nesnesi üzerinde fare üzerine getirilince kırmızı bir kenarlık, fare üzerinden çekilince mavi bir kenarlık olmasını istiyoruz. Bunu tarayıcıya yaptırabilmek için iki şekilde kod yazabiliriz.</p>
+
+        <h3>1.Yöntem</h3>
+
+        <p>Doğrudan resim nesnesinin etiketi üzerinde scripti çalıştırabiliriz.</p>
+
+        <pre>  <code>&lt;img src="resim.jpg" border="1" onMouseOver="<b>this.style.border</b>='1px solid red'" onMouseOut="<b>this.style.border</b>='1px solid blue'"&gt;</code></pre>
+
+        <h3>2.Yöntem</h3>
+
+        <p>İlk olarak web sayfasımızın &lt;head&gt;etiketi&lt;/head&gt; arasına (tavsiye edilir, zorunlu değildir) ya da herhangi bir yerine aşağıdaki betiği yazmamız gerekir. </p>
+
+        <pre>  <code>&lt;script type="text/javascript"&gt;<br>
+      function <b>kirmizi()</b>{<br>
+        document.<i>resim</i>.style.border='1px solid red';<br>
+      }<br>
+      function <b>mavi()</b>{<br>
+        document.<i>resim</i>.style.border='1px solid blue';<br>
+      }<br>
+      &lt;/script&gt;</code>
+    </pre>
+
+
+        <p>Daha sonra resim üzerinde yukarıdaki scriptimizi çalıştırabilmemiz için <code><b>onMouseOver</b></code> ve <code><b>onMouseOut</b></code> uygulamalarını kullanmamız yeterli olacaktır. Script <code><b>resim</b></code> isimli nesneyi bularak yapılması gereken müdahaleyi yapacaktır.
+        </p>
+
+
+        <pre>  <code>&lt;img src="resim.jpg" border="1" <b>name</b>="<i>resim</i>" onMouseOver="<b>kirmizi()</b>" onMouseOut="<b>mavi()</b>"&gt;</code> </pre>
+
+        <h3>Birden fazla nesnede uygulanışı ise aşağıdaki gibi olabilir</h3>
+
+        <p>Öncelikle aşağıdaki betik sayfada &lt;head&gt;etiketi&lt;/head&gt; veya herhangi bir yere yazılır.
+        </p>
+
+        <pre>  <code>&lt;script type="text/javascript"&gt;<br>
+      function <b>kirmizi(</b><i>Obj</i><b>)</b>{<br>
+        <i>Obj</i>.style.border='1px solid red';<br>
+      }<br>
+      function <b>mavi(</b><i>Obj</i><b>)</b>{<br>
+        <i>Obj</i>.style.border='1px solid blue';<br>
+      }<br>
+      &lt;/script&gt;</code>
+    </pre>
+    
+    <p>Fonksiyonların mudahele edeceği nesneyi tanıması için de <b><code>this</code></b> koduyla fonksiyona (<code>function</code>) tanımlama gönderilir. <b><code>this</code></b> tanımlaması alan fonksiyon <code><b>Obj</b></code> isimli tanımsız olan nesneyi <b><code>this</code></b> aracılığı ile tanımlayacak ve gereken müdahaleyi yapacaktır.</p>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
