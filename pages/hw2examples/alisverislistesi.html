@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alışveriş Listesi</title>
+    <link rel="stylesheet" href="../../css/shoppingList.css">
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <h2>Alışveriş Listesi</h2>
+        <input type="text" id="myInput" placeholder="Listenize eleman ekleyin...">
+        <span onclick="newElement()" class="addBtn">Ekle</span>
+        <span onclick="deleteAllElement()" class="delBtn">Tümünü Sil</span>
+    </div>
+
+    <br>
+    <ul id="myUL">
+        <li>Ekmek</li>
+        <li class="checked">Su</li>
+        <li>Maske</li>
+        <li>Yumurta</li>
+        <li>Kahve</li>
+    </ul>
+
+    <script src="../../js/shoopingList.js"></script>
+</body>
+</html>

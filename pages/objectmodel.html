@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link href="../css/style.css" type="text/css" rel="stylesheet" />
     <title>JavaScript Öğreniyorum</title>
+
 </head>
 
 <body>
@@ -25,6 +26,8 @@
         <a href="calismaYapisiveGenelMimari.html">Çalışma Yapısı ve Genel Mimarisi</a>
         <a class="active" href="objectmodel.html">JavaScript Object(Nesne) Modeli ve Kullanımı</a>
         <a href="jsdom.html"> JavaScript DOM (Document Object Model) Kullanımı</a>
+        <a href="hw2examples.html">Hafta 2 Örnekleri</a>
+
 
 
 
@@ -115,12 +118,32 @@
 <span class="nx">hakan</span><span class="p">.</span><span class="nx">konus</span><span class="p">();</span>
 </pre>
 
+        <h3>↓↓↓↓↓↓Bu kısım ise uygulamasıdır↓↓↓↓↓↓↓ </h3>
+
+        <p id="bilgi"></p>
+        <script>
+            //Nesne oluşturuyorum
+            var bilgiler = {
+                isim: "İsmail Can",
+                soyad: "Ardahan",
+                hafta: "2",
+                konu: "Javascript Object(Nesne) Modeli ve kullanımı",
+            };
+
+            document.getElementById("bilgi").innerHTML =
+                "Ödev sahibi" + bilgiler.isim + " " + bilgiler.soyad + " " + "ödev haftası" + bilgiler.hafta + " " + "ödev konusu" + bilgiler.konu;
+
+        </script>
+
+
 
 
 
 
 
     </div>
+
+
 
 
 </body>

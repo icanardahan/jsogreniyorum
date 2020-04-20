@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple Hangman Javascript
+    </title>
+    <link href="../../css/hangman.css" rel="stylesheet">
+    <script src="../../js/hangman.js"></script>
+  </head>
+  <body>
+    <div id="hangman-wrap">
+      <!-- [LEFT : HANGMAN IMAGE] -->
+      <div id="hangman-left">
+        <img id="hangman-img" src="../../assets/hangman.png"/>
+      </div>
+
+      <!-- [RIGHT : INTERFACE] -->
+      <div id="hangman-right">
+        <!-- [GUESS THE WORD(S)] -->
+        <div id="hangman-words"></div>
+
+        <!-- [AVAILABLE CHARACTERS] -->
+        <div id="hangman-char"></div>
+
+        <!-- [CONTROLS & LIVES] -->
+        <div id="hangman-bottom">
+          Can: <span id="hangman-lives"></span> 
+          <input type="button" value="Baştan Başla" id="hangman-reset" disabled/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

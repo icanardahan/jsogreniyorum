@@ -1,0 +1,40 @@
+#hangman-wrap {
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#hangman-left {
+  width: 40%;
+  background: #ccc;
+}
+#hangman-img {
+  transition: all 1s;
+  opacity: 0;
+}
+
+#hangman-right {
+  width: 60%;
+  padding: 10px;
+  background: #aaa;
+}
+#hangman-words span {
+  display: inline-block;
+  margin: 5px;
+  font-size: 2em;
+}
+#hangman-char input[type=button] {
+  font-size: 1.3em;
+  padding: 5px;
+}
+#hangman-bottom {
+  padding: 5px;
+}
+
+
+html, body {
+  font-family: arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
